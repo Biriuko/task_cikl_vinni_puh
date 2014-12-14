@@ -1,0 +1,26 @@
+//Винни-Пух на каждый свой день рождения съедает столько еды.сколь съел на 
+//двух предыдущих...на первых двух днях он съел по 100 грамм...
+//нужно узнать сколь грамм он съест на 15й день рождения...
+
+#include <iostream>
+using namespace std;
+
+void main()
+{
+	int d1 = 100, d2 = 100;
+	int weight = 0;
+
+	int i = 3;
+	while (i < 15)
+	{
+		
+		weight = d1 + d2;
+        d1 = d2;
+        d2 = weight;
+        i++;
+	}
+	cout << "On the 15-th day Vinni puh eat " << weight << " gramm of cake " << endl;
+	system ("pause");
+
+
+}
